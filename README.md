@@ -33,27 +33,7 @@ aws eks --region us-east-1 update-kubeconfig --name hello-world-cluster
 
 This command updates local Kubernetes configuration to connect to the newly created EKS cluster named `hello-world-cluster`.
 
----------------------------------------------
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: hello-world-app
-spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      app: hello-world
-  template:
-    metadata:
-      labels:
-        app: hello-world
-    spec:
-      containers:
-      - name: hello-world
-        image: ${docker-image-url}
-        ports:
-        - containerPort: 80
----------------------------------------------
+**Refer: hcl_terraform_project/k8s/deployment.yaml then**
 
 Apply the deployment:
 
