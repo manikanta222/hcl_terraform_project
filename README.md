@@ -27,7 +27,7 @@ This setup provisions the following components:
 
 ## Deploying Applications on EKS
 
-Once the infrastructure is provisioned, we can deploy a containerized Hello World application on EKS using Kubernetes manifests or Helm charts. To configure your Kubernetes CLI to interact with the EKS cluster, run:
+Once the infrastructure is provisioned, we can deploy a containerized Hello World application on EKS using Kubernetes manifests or Helm charts. To configure K8s CLI to interact with the EKS cluster, run:
 
 aws eks --region us-east-1 update-kubeconfig --name hello-world-cluster
 
