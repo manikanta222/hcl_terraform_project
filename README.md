@@ -4,6 +4,23 @@
 ## Overview
 This Terraform project provisions a scalable infrastructure on AWS, including an EKS cluster for hosting backend applications, AWS Cognito for user authentication, and an HTTP API Gateway integrated with Cognito for secure access.
 
+**REPO_FOLDER_STRUCTURE**
+
+terraform/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+├── eks/
+│   ├── eks-cluster.tf
+│   ├── vpc.tf
+│   ├── security-groups.tf
+├── cognito/
+│   ├── cognito-user-pool.tf
+│   ├── cognito-app-client.tf
+│   ├── api-gateway.tf
+k8s/
+├── deployment.yaml
+
 ## Deployment Steps
 
 To deploy the infrastructure, follow these steps:
