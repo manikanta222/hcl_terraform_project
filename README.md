@@ -1,4 +1,4 @@
-text
+
 # hcl_terraform_project
 
 ## Overview
@@ -11,17 +11,11 @@ To deploy the infrastructure, follow these steps:
 1. **Initialize Terraform**:
 terraform init
 
-text
-
 2. **Plan the resources**:
 terraform plan -out=tfplan.out
 
-text
-
 3. **Apply the configuration**:
 terraform apply tfplan.out
-
-text
 
 ## Infrastructure Setup
 
@@ -37,11 +31,9 @@ Once the infrastructure is provisioned, we can deploy a containerized Hello Worl
 
 aws eks --region us-east-1 update-kubeconfig --name hello-world-cluster
 
-text
+This command updates local Kubernetes configuration to connect to the newly created EKS cluster named `hello-world-cluster`.
 
-This command updates your local Kubernetes configuration to connect to the newly created EKS cluster named `hello-world-cluster`.
-
-text
+---------------------------------------------
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -61,8 +53,8 @@ spec:
         image: ${docker-image-url}
         ports:
         - containerPort: 80
+---------------------------------------------
 
 Apply the deployment:
 
-bash
 kubectl apply -f deployment.yaml
