@@ -6,6 +6,7 @@ This Terraform project provisions a scalable infrastructure on AWS, including an
 
 **REPO_FOLDER_STRUCTURE**
 
+```
 terraform/
 ├── main.tf
 ├── variables.tf
@@ -20,6 +21,7 @@ terraform/
 │   ├── api-gateway.tf
 k8s/
 ├── deployment.yaml
+```
 
 ## Deployment Steps
 
