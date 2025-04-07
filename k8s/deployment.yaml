@@ -7,4 +7,13 @@ spec:
   selector:
     matchLabels:
       app: hello-world
-  template
+  template:
+    metadata:
+      labels:
+        app: hello-world
+    spec:
+      containers:
+      - name: hello-world
+        image: <image_name>
+        ports:
+        - containerPort: 80
